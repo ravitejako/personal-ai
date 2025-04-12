@@ -46,13 +46,14 @@ export default function Home() {
       userMessage.sentiment = sentimentResult.sentiment;
 
       let aiResponseText: string;
-      if (input.toLowerCase().includes('grok')) {
+      //if (input.toLowerCase().includes('grok')) {
+      {
         const grokResult = await generateGrokResponse({userInput: input});
         aiResponseText = grokResult.grokResponse;
-      } else {
+      } //else {
         // Simulate AI response (replace with actual GenAI call)
-        aiResponseText = `Echo: ${input}`; // Replace with actual AI response
-      }
+        //aiResponseText = `Echo: ${input}`; // Replace with actual AI response
+      //}
 
       // Simulate AI response (replace with actual GenAI call)
       setTimeout(() => {
