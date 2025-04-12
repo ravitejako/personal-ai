@@ -7,6 +7,7 @@ import {Button} from '@/components/ui/button';
 import {toast} from "@/hooks/use-toast";
 import {Icons} from "@/components/icons";
 import {analyzeSentiment} from '@/ai/flows/analyze-sentiment';
+import {generateGrokResponse} from '@/ai/flows/grok-response';
 
 const aiName = 'AIAssistant';
 const userAvatar = 'https://picsum.photos/id/237/48/48';
@@ -44,11 +45,20 @@ export default function Home() {
       const sentimentResult = await analyzeSentiment({text: input});
       userMessage.sentiment = sentimentResult.sentiment;
 
+      let aiResponseText: string;
+      if (input.toLowerCase().includes('grok')) {
+        const grokResult = await generateGrokResponse({userInput: input});
+        aiResponseText = grokResult.grokResponse;
+      } else {
+        // Simulate AI response (replace with actual GenAI call)
+        aiResponseText = `Echo: ${input}`; // Replace with actual AI response
+      }
+
       // Simulate AI response (replace with actual GenAI call)
       setTimeout(() => {
         const aiResponse: ChatMessage = {
           sender: 'ai',
-          text: `Echo: ${input}`, // Replace with actual AI response
+          text: aiResponseText, // Replace with actual AI response
         };
         setMessages(prev => [...prev, aiResponse]);
         setLoading(false);
