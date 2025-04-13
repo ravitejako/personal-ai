@@ -1,6 +1,6 @@
-# Personal AI Companion
+# Luma AI Companion
 
-This project is a Next.js application designed to be a personal AI companion. It leverages Genkit for AI functionalities such as sentiment analysis and generating responses using the Grok model.
+This project is a Next.js application designed to be the Luma AI companion. It leverages Genkit for AI functionalities such as sentiment analysis and generating responses using the Grok model.
 
 ## Project Structure
 

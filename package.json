@@ -1,15 +1,16 @@
 {
-  "name": "nextn",
+  "name": "luma-ai",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
-    "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
+    "genkit:dev": "GOOGLE_GENAI_API_KEY=AIzaSyBmac-qTf-NkoHvZVpI85zk9vyuzxC5IB4 genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:env": "echo $GOOGLE_GENAI_API_KEY"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.0.4",

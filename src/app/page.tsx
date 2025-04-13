@@ -75,9 +75,12 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-secondary">
-      <header className="bg-primary p-4 text-white text-center">
-        <h1>Personal AI Companion</h1>
+    <div className="flex flex-col h-screen bg-[#0B0B1A]">
+      <header className="bg-[#0B0B1A] p-4 flex items-center justify-center border-b border-gray-800">
+        <div className="flex items-center gap-3">
+          <img src="/images/logo.svg" alt="Luma Logo" className="h-8 w-auto" />
+          <h1 className="text-white text-xl font-medium bg-gradient-to-r from-[#00E5FF] to-[#6666FF] bg-clip-text text-transparent">Luma</h1>
+        </div>
       </header>
 
       <main className="flex-1 p-4 overflow-y-scroll">
