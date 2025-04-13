@@ -16,6 +16,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Luma AI',
   description: 'Your Personal AI Companion',
+  icons: {
+    icon: [
+      {
+        url: '/images/favicon.svg',
+        type: 'image/svg+xml',
+      }
+    ],
+  },
+  themeColor: '#0B0B1A',
 };
 
 export default function RootLayout({
@@ -25,6 +34,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#0B0B1A" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
         <Toaster />
