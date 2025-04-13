@@ -17,12 +17,7 @@ export const metadata: Metadata = {
   title: 'Luma AI',
   description: 'Your Personal AI Companion',
   icons: {
-    icon: [
-      {
-        url: '/images/favicon.svg',
-        type: 'image/svg+xml',
-      }
-    ],
+    icon: '/images/favicon.svg',
   },
   themeColor: '#0B0B1A',
 };
